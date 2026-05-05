@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <link rel="stylesheet" href="exercise.css">
+</head>
+
+<body>
+    <div class="pageBody">
+        <div class="navbar">
+            <div class="icon">
+                <a href="./index.html"><img src="logo-removebg-preview.png" class="logo" alt="" width="200" height="100"></a>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./food.html">FOOD</a></li>
+                    <li><a href="./diet.html">DIET</a></li>
+                    <li><a href="exercise.html">EXERCISES</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h1>Exercise Routines</h1>
+
+        <div class="exercise-selector">
+            <label for="fitness-goal">Select Fitness Goal:</label>
+            <select id="fitness-goal">
+                <option value="">Choose a goal</option>
+                <option value="weight-loss">Weight Loss</option>
+                <option value="muscle-gain">Muscle Gain</option>
+                <option value="maintain-weight">Maintain Weight</option>
+            </select>
+
+            <label for="fitness-level">Select Fitness Level:</label>
+            <select id="fitness-level">
+                <option value="">Choose a level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <button onclick="getExerciseRoutine()">Get Your Routine</button>
+        </div>
+
+        <div class="content">
+            <!-- Weight Loss Routines -->
+            <div id="weight-loss-beginner" class="data" style="display: none;">
+                <h2>Weight Loss Routine for Beginners</h2>
+                <ul>
+                    <li>Jumping Jacks</li>
+                    <video width="320" height="240" controls>
+                        <source src="jumping jacks.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>High Knees</li>
+                    <video width="320" height="240" controls>
+                        <source src="high knees.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Bodyweight Squats</li>
+                    <video width="320" height="240" controls>
+                        <source src="squats.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups (modified if needed)</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Plank</li>
+                    <video width="320" height="240" controls>
+                        <source src="plank.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+            <div id="weight-loss-intermediate" class="data" style="display: none;">
+                <h2>Weight Loss Routine for Intermediate</h2>
+                <ul>
+                    <li>Burpees</li>
+                    <video width="320" height="240" controls>
+                        <source src="burpees.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Mountain Climbers</li>
+                    <video width="320" height="240" controls>
+                        <source src="mountain climbers.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Jumping Jacks</li>
+                    <video width="320" height="240" controls>
+                        <source src="jumping jacks.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Plank</li>
+                    <video width="320" height="240" controls>
+                        <source src="plank.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+            <div id="weight-loss-advanced" class="data" style="display: none;">
+                <h2>Weight Loss Routine for Advanced</h2>
+                <ul>
+                    <li>Burpees</li>
+                    <video width="320" height="240" controls>
+                        <source src="burpees.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Mountain Climbers</li>
+                    <video width="320" height="240" controls>
+                        <source src="mountain climbers.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Jumping Jacks</li>
+                    <video width="320" height="240" controls>
+                        <source src="jumping jacks.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Plank</li>
+                    <video width="320" height="240" controls>
+                        <source src="plank.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+
+            <!-- Muscle Gain Routines -->
+            <div id="muscle-gain-beginner" class="data" style="display: none;">
+                <h2>Muscle Gain Routine for Beginners</h2>
+                <ul>
+                    <li>Bodyweight Squats</li>
+                    <video width="320" height="240" controls>
+                        <source src="squats.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Dips</li>
+                    <video width="320" height="240" controls>
+                        <source src="dips.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Plank</li>
+                    <video width="320" height="240" controls>
+                        <source src="plank.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Glute Bridges</li>
+                    <video width="320" height="240" controls>
+                        <source src="glute bridges.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+            <div id="muscle-gain-intermediate" class="data" style="display: none;">
+                <h2>Muscle Gain Routine for Intermediate</h2>
+                <ul>
+                    <li>Bodyweight Squats</li>
+                    <video width="320" height="240" controls>
+                        <source src="squats.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Dips</li>
+                    <video width="320" height="240" controls>
+                        <source src="dips.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Pull-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="pull ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+            <div id="muscle-gain-advanced" class="data" style="display: none;">
+                <h2>Muscle Gain Routine for Advanced</h2>
+                <ul>
+                    <li>Deadlifts</li>
+                    <video width="320" height="240" controls>
+                        <source src="deadlift.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Squats</li>
+                    <video width="320" height="240" controls>
+                        <source src="w squats.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Bench Press</li>
+                    <video width="320" height="240" controls>
+                        <source src="bench press.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Pull-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="pull ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Overhead Press</li>
+                    <video width="320" height="240" controls>
+                        <source src="overhead press.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+
+            <!-- Maintain Weight Routines -->
+            <div id="maintain-weight-beginner" class="data" style="display: none;">
+                <h2>Maintain Weight Routine for Beginners</h2>
+                <ul>
+                    <li>Bodyweight Squats</li>
+                    <video width="320" height="240" controls>
+                        <source src="squats.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Plank</li>
+                    <video width="320" height="240" controls>
+                        <source src="plank.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>High Knees</li>
+                    <video width="320" height="240" controls>
+                        <source src="high knees.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Glute Bridges</li>
+                    <video width="320" height="240" controls>
+                        <source src="glute bridges.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+            <div id="maintain-weight-intermediate" class="data" style="display: none;">
+                <h2>Maintain Weight Routine for Intermediate</h2>
+                <ul>
+                    <li>Burpees</li>
+                    <video width="320" height="240" controls>
+                        <source src="burpees.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Mountain Climbers</li>
+                    <video width="320" height="240" controls>
+                        <source src="mountain climbers.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Jumping Jacks</li>
+                    <video width="320" height="240" controls>
+                        <source src="jumping jacks.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Plank</li>
+                    <video width="320" height="240" controls>
+                        <source src="plank.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+            <div id="maintain-weight-advanced" class="data" style="display: none;">
+                <h2>Maintain Weight Routine for Advanced</h2>
+                <ul>
+                    <li>Burpees</li>
+                    <video width="320" height="240" controls>
+                        <source src="burpees.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Mountain Climbers</li>
+                    <video width="320" height="240" controls>
+                        <source src="mountain climbers.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Jumping Jacks</li>
+                    <video width="320" height="240" controls>
+                        <source src="jumping jacks.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Push-Ups</li>
+                    <video width="320" height="240" controls>
+                        <source src="push ups.mp4" type="video/mp4">
+                                 
+                    </video>
+                    <li>Plank</li>
+                    <video width="320" height="240" controls>
+                        <source src="plank.mp4" type="video/mp4">
+                                 
+                    </video>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getExerciseRoutine() {
+            const goal = document.getElementById('fitness-goal').value;
+            const level = document.getElementById('fitness-level').value;
+
+            const routines = document.querySelectorAll('.data');
+            routines.forEach(routine => routine.style.display = 'none');
+
+            if (goal && level) {
+                const routineId = `${goal}-${level}`;
+                const routineElement = document.getElementById(routineId);
+                if (routineElement) {
+                    routineElement.style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
